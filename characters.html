@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色介紹 - 超級瑪利歐兄弟電影</title>
+
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- 引入 Bootstrap CSS -->
+
+    <style>
+        .nav-link:hover {
+            color: white;
+        }
+
+        /* 確保圖片大小統一 */
+        .character-img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .character-img:hover {
+            transform: scale(1.2);
+        }
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: 70px;
+            border-radius: 25%;
+            border: solid;
+            border-color: darkgrey;
+            font-size: 25px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/supermario.png" alt="supermario" style="height: 80px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./characters.html">CHARACTERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./story.html">STORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./reviews.html">REVIEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 頁面標題 -->
+    <header class="text-center p-4">
+        <h1 class="fw-bold">CHARACTERS</h1>
+    </header>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- 角色卡片 -->
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Mario_NSMBW.png" class="character-img" alt="瑪利歐">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">瑪利歐</h3>
+                        <p class="small text-secondary">勇敢的水管工，為了拯救碧姬公主勇闖蘑菇王國。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Luigi_NSMBW.png" class="character-img" alt="路易吉">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">路易吉</h3>
+                        <p class="small text-secondary">瑪利歐的弟弟，性格害羞但關鍵時刻總能展現勇氣。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/PeachNSMBW.png" class="character-img" alt="碧姬公主">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">碧姬公主</h3>
+                        <p class="small text-secondary">蘑菇王國的領袖，聰明勇敢，擅長應對危機。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Bowser_NSMBW.png" class="character-img" alt="庫巴">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">庫巴</h3>
+                        <p class="small text-secondary">強大的反派，夢想統治蘑菇王國並強迫碧姬公主成為他的皇后。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/ToadNSMBW.png" class="character-img" alt="奇諾比奧">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">奇諾比奧</h3>
+                        <p class="small text-secondary">蘑菇王國的居民，樂觀勇敢，總是願意幫助瑪利歐與碧姬公主。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Donkey_Kong.png" class="character-img" alt="咚奇剛">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">咚奇剛</h3>
+                        <p class="small text-secondary">力量強大的猩猩，擁有驚人的戰鬥技巧與自信。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Kamek.png" class="character-img" alt="卡美克">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">卡美克</h3>
+                        <p class="small text-secondary">庫巴的得力助手，擅長魔法，幫助庫巴策劃各種陰謀。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Lumalee.png" class="character-img" alt="卡美克">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">Lumalee</h3>
+                        <p class="small text-secondary">可愛的藍星星Lumalee與路易吉一樣被綁架，還不斷講喪氣話，與超萌外型不搭。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center border-0 shadow-sm p-3 d-flex flex-column align-items-center">
+                    <img src="./img/Diddy_kong.png" class="character-img" alt="卡美克">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">迪迪剛</h3>
+                        <p class="small text-secondary">他是金剛家族的一員，與咚奇剛（Donkey Kong）關係密切。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="backToTop" class="btn btn-Secondary">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let backToTop = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 200) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        backToTop.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+</body>
+
+</html>

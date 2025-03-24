@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首頁 - 超級瑪利歐兄弟電影</title>
+  <!-- 引入 Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    .nav-link:hover {
+      color: white;
+    }
+
+    .videobox {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+
+    .videobox iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #backToTop {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: 70px;
+            border-radius: 25%;
+            border: solid;
+            border-color: darkgrey;
+            font-size: 25px;
+            z-index: 1000;
+        }
+  </style>
+</head>
+
+<body>
+  <!-- 主要輪播區塊 -->
+  <div id="movieCarousel" class="carousel slide container" data-bs-ride="carousel">
+    <!-- 輪播按鈕 -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- 第一張圖片 (預設顯示) -->
+      <div class="carousel-item ratio ratio-16x9 active">
+        <img src="./img/index1.jpg" class="d-block w-100" alt="瑪利歐">
+      </div>
+      <!-- 第二張圖片 -->
+      <div class="carousel-item ratio ratio-16x9">
+        <img src="./img/index2.jpg" class="d-block w-100" alt="瑪利歐 2">
+      </div>
+      <!-- 第三張圖片 -->
+      <div class="carousel-item ratio ratio-16x9">
+        <img src="./img/index4.png" class="d-block w-100" alt="瑪利歐 2">
+      </div>
+      <!-- 第四張圖片 -->
+      <div class="carousel-item ratio ratio-16x9">
+        <img src="./img/index7.jpg" class="d-block w-100" alt="瑪利歐 2">
+      </div>
+    </div>
+
+    <!-- 左側手動切換按鈕 -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <!-- 右側手動切換按鈕 -->
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-danger sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./img/supermario.png" alt="supermario" style="height: 80px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fw-bolder" href="./index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bolder" href="./characters.html">CHARACTERS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bolder" href="./story.html">STORY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bolder" href="./reviews.html">REVIEWS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bolder" href="./contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="videobox">
+    <iframe frameborder="0" src="https://www.youtube.com/embed/TnGl01FkMMo?si=TCf4RPu_EXxhV7Yv"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div>
+    <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#summary">點我看故事摘要</button>
+    <div id="summary" class="collapse m-5">
+      <p>電影講述了瑪利歐和路易吉這對水管工兄弟的冒險旅程。兩人意外被傳送到不同的世界，瑪利歐來到蘑菇王國，而路易吉則被困在庫巴掌控的暗黑之國。</p>
+      <p>為了拯救路易吉並阻止庫巴的侵略計畫，瑪利歐與碧姬公主、奇諾比奧以及咚奇剛聯手展開了一場充滿挑戰的冒險。</p>
+      <p><strong>《超級瑪利歐兄弟電影版》</strong>（英語：The Super Mario Bros. Movie，中國大陸譯《超級馬力歐兄弟大電影》，香港譯《超級瑪利歐兄弟大電影》）是一部2023年美日合製電腦動畫冒險電影，由照明娛樂和任天堂共同製作、環球影業發行。該片改編自任天堂的《瑪利歐》遊戲系列，由亞倫·霍爾維斯和麥可·傑勒尼克共同執導，馬修·福格爾編劇。主要配音員包括克里斯·普瑞特、安雅·泰勒-喬伊、查理·戴、傑克·布萊克、基根-麥可·奇、塞斯·羅根、弗雷德·阿米森、凱文·麥可·理查森和賽巴斯汀·曼尼斯卡爾科。故事講述創業不順遂的瑪利歐和路易吉，意外被捲入蘑菇王國與庫巴掌控的「暗黑之國」的鬥爭，為了幫助蘑菇王國阻止庫巴的侵略行動而展開冒險旅程。
+
+        《超級瑪利歐兄弟電影版》由環球影業定於2023年4月5日美國上映。媒體與影評界對本片的評價褒貶不一，主要稱讚視覺動畫、動作場面、忠實呈現遊戲元素、布萊克的配音演出表現，但批評角色刻畫層次單薄、普瑞特和戴的配音表現、劇情設計、偏向粉絲服務的內容，與觀眾的積極反應有所區別。電影的全球票房突破13億美元，成為影史最賣座電子遊戲改編電影，並一度成為2023年全球票房冠軍，直至9月被《Barbie芭比》超越。本片入圍第96屆奧斯卡金像獎最佳動畫片角逐名單。續集《超級瑪利歐兄弟電影版2》預定2026年4月3日於美國上映。</p>
+    </div>
+  </div>
+  <button id="backToTop" class="btn btn-Secondary">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+  <br><br><br><br>
+  <!-- 引入 Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let backToTop = document.getElementById("backToTop");
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    };
+    backToTop.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 - 超級瑪利歐兄弟電影</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .nav-link:hover {
+            color: white;
+        }
+
+        .bi {
+            font-size: 50px;
+        }
+
+        a {
+            text-decoration: none
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/supermario.png" alt="supermario" style="height: 80px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./characters.html">CHARACTERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./story.html">STORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./reviews.html">REVIEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="./contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center mt-4">
+        <h1 class="fw-bold">CONTACT US</h1>
+    </header>
+    <div class="container">
+        <form id="contactForm" class="row p-3">
+            <div class="row col-lg-6 col-md-6">
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="contactName" id="contactName" placeholder="Name"
+                            required minlength="2">
+                        <label for="contactName">Name</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="ccontactEmail" id="contactEmail"
+                            placeholder="Email" required>
+                        <label for="contactEmail">Email</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" name="contactTel" id="contactTel"
+                            placeholder="Phone number" required pattern="[0-9]{10}" title="請輸入 10 位數字，例如 0912345678">
+                        <label for="contactTel">Phone number</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" name="contactMessage" id="contactMessage" placeholder="Comment"
+                            style="height: 150px;"></textarea>
+                        <label class="form-label" for="contactMessage">Comment</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="form-floating mb-3 d-grid">
+                        <input type="submit" class="btn btn-danger" value="Send Message"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div>
+                    <a href="#"><i class="bi bi-facebook text-primary m-1"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="#"><i class="bi bi-line text-success m-1"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="#"><i class="bi bi-telegram text-dark m-1"></i>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function doChange() {
+            localStorage.setItem(this.name, this.value);
+        }
+
+        $("#contactName").keyup(doChange);
+        $("#contactEmail").keyup(doChange);
+        $("#contactTel").keyup(doChange);
+        $("#contactMessage").keyup(doChange);
+
+        function readAndShow() {
+            if (localStorage["contactName"])
+                $("#contactName").val(localStorage["contactName"]);
+            if (localStorage["contactEmail"])
+                $("#contactEmail").val(localStorage["contactEmail"]);
+            if (localStorage["contactTel"])
+                $("#contactTel").val(localStorage["contactTel"]);
+            if (localStorage["contactMessage"])
+                $("#contactMessage").val(localStorage["contactMessage"]);
+        }
+
+        $(document).ready(readAndShow);
+
+        $("#contactForm").submit(function () {
+            localStorage.clear();
+        });
+
+        $("#contactForm").submit(function (event) {
+            event.preventDefault(); // 阻止表單自動提交與頁面刷新
+            localStorage.clear(); // 清除 localStorage
+            alert("表單已送出，儲存資料已清除！"); // 顯示提示訊息
+            this.reset(); // 清空表單欄位
+        });
+    </script>
+</body>
+
+</html>
