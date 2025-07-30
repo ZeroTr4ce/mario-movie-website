@@ -1,4 +1,4 @@
-# 🎬 Mario Movie Website
+# 🎬 Movie Website
 
 一個以電影主題為設計靈感的網站專案，展示 Super Mario 系列風格。內含影片預覽、海報展示、響應式版面設計等特色。
 
