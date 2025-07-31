@@ -35,7 +35,7 @@
 
 ```bash
 # Clone 專案
-git clone https://github.com/ZeroTr4ce/mario-movie-website.git
+git clone https://github.com/ZeroTr4ce/movie-website.git
 cd mario-movie-website
 
 # 開啟 index.html 瀏覽（也可用 Live Server 或類似工具）
